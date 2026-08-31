@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+#define MAX 5
+
+int stack[MAX], top = -1;
+
+int main()
+{
+    int x;
+
+    printf("Enter element to PUSH: ");
+    scanf("%d", &x);
+
+    stack[++top] = x;
+    printf("Pushed: %d\n", x);
+
+    printf("Top element: %d\n", stack[top]);
+
+    printf("Popped: %d\n", stack[top--]);
+
+    return 0;
+}

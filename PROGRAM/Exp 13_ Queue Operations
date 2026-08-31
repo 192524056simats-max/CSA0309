@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+#define MAX 5
+
+int queue[MAX], front = -1, rear = -1;
+
+int main()
+{
+    int x, i;
+
+    printf("Enter element to ENQUEUE: ");
+    scanf("%d", &x);
+
+    front = rear = 0;
+    queue[rear] = x;
+
+    printf("Dequeued Element: %d\n", queue[front]);
+    front++;
+
+    printf("Queue Elements: ");
+    for(i = front; i <= rear; i++)
+        printf("%d ", queue[i]);
+
+    return 0;
+}
